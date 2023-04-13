@@ -1,0 +1,78 @@
+= REST Service API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+= Resources
+
+
+== 로그인 [post]
+
+include::{snippets}/login/curl-request.adoc[]
+
+=== 요청 구조
+
+include::{snippets}/login/http-request.adoc[]
+
+==== 요청 파라미터들
+
+include::{snippets}/login/request-body.adoc[]
+
+=== 응답 구조
+
+include::{snippets}/login/http-response.adoc[]
+
+==== 응답 파라미터들
+
+include::{snippets}/login/response-fields.adoc[]
+
+
+== 회원가입 [post]
+
+include::{snippets}/signup/curl-request.adoc[]
+
+=== 요청 구조
+
+include::{snippets}/signup/http-request.adoc[]
+
+==== 요청 파라미터들
+
+include::{snippets}/signup/request-body.adoc[]
+
+=== 응답 구조
+
+include::{snippets}/signup/http-response.adoc[]
+
+==== 응답 파라미터들
+
+include::{snippets}/signup/response-fields.adoc[]
+//
+// == 토큰재발행 [post]
+//
+//
+// include::{snippets}/reissue/curl-request.adoc[]
+//
+// === 요청 구조
+//
+// include::{snippets}/reissue/http-request.adoc[]
+//
+// ==== 요청 파라미터들
+//
+// include::{snippets}/reissue/request-body.adoc[]
+//
+// === 응답 구조
+//
+// include::{snippets}/reissue/http-response.adoc[]
+//
+// ==== 응답 파라미터들
+//
+// include::{snippets}/reissue/response-fields.adoc[]
+
+
+
+
+
+
