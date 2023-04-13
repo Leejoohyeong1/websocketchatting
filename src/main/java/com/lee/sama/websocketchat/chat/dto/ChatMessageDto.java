@@ -23,4 +23,14 @@ public class ChatMessageDto {
     //내용
 
     private String message;
+
+    @Override
+    public String toString() {
+        return "ChatMessageDto{" +
+                "type=" + type +
+                ", roomId='" + roomId + '\'' +
+                ", sender='" + sender + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

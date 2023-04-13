@@ -1,16 +1,9 @@
 package com.lee.sama.websocketchat.chat.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lee.sama.websocketchat.chat.dto.ChatMessageDto;
-import com.lee.sama.websocketchat.chat.dto.MessageType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Controller;
@@ -19,7 +12,6 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @Slf4j
@@ -43,10 +35,9 @@ public class ChatController {
 
         List<String> nativeHeader = headerAccesor.getNativeHeader("username");
 
-        for (String header :
-                nativeHeader) {
-            log.info("header =>{}",header);
-        }
+//        for (String header : nativeHeader) {
+//            log.info("header =>{}",header);
+//        }
 //        System.out.println("auth:" + headerAccesor.getNativeHeader("Authorization"));
         log.info("Received a new web socket connection");
         log.info("새로운 웹 소켓 연결을 받았습니다.");

@@ -24,11 +24,14 @@ public class MessageController {
         }
         template.convertAndSend("/topic/chat/room/" + message.getRoomId(), message);
     }
-//    ./chat/message
+//    ./chat/messagejkm,                 j
 //    {"type":"ENTER","roomId":"1","sender":"Lee","message":"hihi"}
 
     @MessageMapping(value = "/chat/message")
     public void message(ChatMessageDto message){
+
+        log.info("message => {}",message);
+
         template.convertAndSend("/topic/chat/room/" + message.getRoomId(), message);
     }
 }
